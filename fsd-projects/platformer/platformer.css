@@ -8,7 +8,8 @@ body {
 }
 
 canvas {
-  background-color: lightblue;
+  /* background-image: url("https://static.wikia.nocookie.net/robloxcities/images/1/1e/Gubby.webp/revision/latest/thumbnail/width/700/height/700?cb=20250511065644"); */
+  background-color: #63099c;
   margin: 20px;
   border-radius: 15px;
   border: 5px solid rgba(118, 0, 233, 0.375);
