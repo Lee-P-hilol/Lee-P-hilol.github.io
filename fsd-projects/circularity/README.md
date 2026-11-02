@@ -36,7 +36,6 @@ In this project, you’ll create an interactive "motion poem" that combines rand
 ### Step-by-Step Work Flow
 
 1. 📂 **Open your Circularity project's `init.js` file** in your codespace to get started.
-
    - 🔍 Locate the file tree (the list of files and folders) in the left panel of your codespace.
    - Click the `fsd-projects` folder 📂 in your file tree to expand the list of projects.
    - Click on the `circularity` folder 📂 located within the `fsd-projects` folder.
@@ -110,12 +109,11 @@ There are two ways to open your project with **Live Server**:
 ### Step-by-Step Instructions
 
 1. 🔍 **Locate the `// TODO 1` comment in the `PROGRAM SETUP` Section**
-
    - Your code for this TODO will go **below** this comment
 
 2. **Declare Variables for Your Circle and Array**
    - Create a variable named `circles` and assign it to an empty array.
-       - This variable will hold all of the circles you create.
+     - This variable will hold all of the circles you create.
 
 ---
 
@@ -157,23 +155,17 @@ There are two ways to open your project with **Live Server**:
 1. 🔍 **Locate the `// TODO 2` comment in the `PROGRAM SETUP` Section**
 
 2. **Declare the `drawCircle` Function**
-
    - Declare a function named `drawCircle`.
-
      - This function will draw a circle on the canvas and store it in the `circles` array. It will also allow you to easily add multiple circles later.
 
    - **Syntax Hint**: To declare a function, use the following structure/syntax:
 
      ```javascript
-     function exampleFunction() {
-
-     }
+     function exampleFunction() {}
      ```
 
 3. **Add Code to Draw a Circle in `drawCircle`**
-
    - Inside the `drawCircle` function's code block, add code to:
-
      - Draw a random circle using `draw.randomCircleInArea()`.
      - Apply random velocity to the circle with `physikz.addRandomVelocity`.
      - Add the circle to the `view`.
@@ -228,7 +220,6 @@ There are two ways to open your project with **Live Server**:
 1. 🔍 **Locate the `// TODO 3` comment in the `PROGRAM SETUP` Section**
 
 2. **Add 5 Circles to Your Screen**
-
    - Call the `drawCircle` function five times to add five circles to the canvas. This step will draw multiple circles on your screen, and you’ll improve the code later later.
 
    - **Syntax Hint**: To call a function, use the following structure/syntax:
@@ -282,7 +273,7 @@ There are two ways to open your project with **Live Server**:
 
 - To access a single circle stored in the `circles` array, use **bracket notation** with an index number inside square brackets, like so:
   ```javascript
-  circles[0]
+  circles[0];
   ```
 - The code above accesses the first item in the array. Remember that array indices start at `0`, so `circles[1]` accesses the second circle, and so on.
 
@@ -295,7 +286,6 @@ There are two ways to open your project with **Live Server**:
 1. 🔍 **Locate the `// TODO 4` comment in the `update` function's code block**
 
 2. **Call `physikz.updatePosition` with Bracket Notation**
-
    - Use the following pattern to call `physikz.updatePosition()` for each circle:
      ```javascript
      physikz.updatePosition(/* bracket notation to access a circle from the circles array */);
@@ -303,7 +293,6 @@ There are two ways to open your project with **Live Server**:
    - This line tells JavaScript to update the position of the first circle in the array.
 
 3. **Repeat for Each Circle (Placeholder for a Loop)**
-
    - Repeat the call to `physikz.updatePosition` for each of the 5 circles, using the correct index for each. You'll improve this with a loop in a later TODO to avoid repeating code.
 
    - **CODE**:
@@ -360,7 +349,6 @@ There are two ways to open your project with **Live Server**:
 1. 🔍 **Locate the `// TODO 5` comment in the `update` function's code block**
 
 2. **Call `game.checkCirclePosition()` for Each Circle**
-
    - Use `game.checkCirclePosition()` to make any circles that move off the screen reappear on the other side.
    - For now, access each circle in the `circles` array using bracket notation, similar to TODO 4. Later, you’ll replace these repetitive function calls with a loop.
 
@@ -479,7 +467,6 @@ Understanding these properties will help you create conditions to keep circles o
 1. 🔍 **Locate the `// TODO 6` comment located inside the `game.checkCirclePosition` function**
 
 2. **Add an `if` Statement for Each Edge**
-
    - The right side logic from TODO 5 already ensures that circles reappear on the left when exiting the right.
    - Add an `if` statement for each of the other edges to reposition the circle when it exits the boundary:
      - **Left Boundary**: Move circles from the left edge to the right.
@@ -487,7 +474,6 @@ Understanding these properties will help you create conditions to keep circles o
      - **Bottom Boundary**: Move circles from the bottom edge to the top.
 
 3. **Guided Hints for Each Condition**
-
    - **Left Boundary**:
      - Think about the `x` position of a circle when it moves off the left side. What value should `circle.x` be set to in order to make the circle appear on the opposite edge?
    - **Top Boundary**:
@@ -496,7 +482,6 @@ Understanding these properties will help you create conditions to keep circles o
      - Similarly, when the `y` position moves off the bottom edge, what adjustment is needed for the circle to reappear at the top?
 
 4. **Challenge**: Make the circles exit and reappear on the screen more smoothly!
-
    - Use the `circle.radius` property to adjust the conditions so that circles fully exit the screen before reappearing on the opposite side.
    - For example, instead of checking if `circle.x` is less than `0`, you can calculate the right edge of the circle using the following code:
 
@@ -559,19 +544,15 @@ Understanding these properties will help you create conditions to keep circles o
 1. 🔍 **Locate the `// TODO 7` comment in the `PROGRAM SETUP` Section**
 
 2. **Create a Loop to Simplify Your Code**
-
    - Use a `for` loop to replace the previous repetitive code and draw 50 circles.
 
    - **Syntax Hint**: To create a `for` loop that repeats 25 times, use the following structure/syntax:
 
      ```javascript
-     for (var i = 0; i < 25; i++) {
-      
-     }
+     for (var i = 0; i < 25; i++) {}
      ```
 
 3. **Replace Your Repetitive Function Calls**
-
    - Inside of your `for` loop's code block, add a single call to the `drawCircle` function.
    - Delete or comment out the 5 repetitive `drawCircle()` calls you added in `TODO 3`.
 
@@ -715,16 +696,13 @@ Understanding these three statements will help you write efficient `for` loops t
 ### Step-by-Step Instructions
 
 1. 🔍 **Locate the `// TODO 8 / TODO 9` comment in the `update` function's code block**
-
    - This is where you will replace the repetitive function calls with a loop.
 
 2. **Call `physikz.updatePosition` within the loop**
-
    - Copy one of your repetitive `physikz.updatePosition` function calls from TODO 4, and paste it into your loop's code block.
    - Replace the hard-coded number with the variable `i` so that your loop dynamically accesses each circle in the array using bracket notation (`circles[i]`).
 
 3. **Add `game.checkCirclePosition` to the Loop**
-
    - After the `physikz.updatePosition` call inside your loop's code block, call the `game.checkCirclePosition` function to ensure each circle reappears if it exits the screen.
    - Use bracket notation with `circles[i]` when passing a circle to the `game.checkCirclePosition` function, just as you did with `physikz.updatePosition`.
 
@@ -775,7 +753,6 @@ Check for Bonus Challenges in the circularity project folder's BONUS_CHALLENGES.
 ### Step-by-Step Instructions
 
 1. **Open the terminal in your codespace**
-
    - If the terminal isn’t visible, click the **Hamburger Menu > Terminal > New Terminal**.
 
 2. **Enter the following commands one by one** in the terminal, pressing enter after each command to run it:
