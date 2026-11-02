@@ -102,25 +102,23 @@ var init = function (window) {
         it to the opposite side of the screen.
         */
         game.checkCirclePosition = function(circle) {
-
             // if the circle has gone past the RIGHT side of the screen then place it on the LEFT
-            if ( circle.x > canvas.width ) {
-                circle.x = 0;
+            if ( circle.x > canvas.width + circle.radius ) {
+                circle.x = 0 - circle.radius;
             }
             
             // TODO 6 : YOUR CODE STARTS HERE //////////////////////
             
-            if ( circle.x < 0 ){
-                circle.x = canvas.width;
+            if ( circle.x + circle.radius < 0 ){
+                circle.x = canvas.width + circle.radius;
             }
-            if ( circle.y < 0 ){
-                circle.y = canvas.height;
+            if ( circle.y + circle.radius < 0 ){
+                circle.y = canvas.height + circle.radius;
             }
-            if ( circle.y > canvas.height ){
-                circle.y = 0;
+            if ( circle.y - circle.radius > canvas.height ){
+                circle.y = 0 - circle.radius;
             }
-            // lwk finish this later 👌 //
-            // by that i mean challenge by the dubs //
+
 
             // YOUR TODO 6 CODE ENDS HERE //////////////////////////
         }
